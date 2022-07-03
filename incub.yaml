@@ -1,5 +1,5 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
+kind: GitRepository
 metadata:
   name: superset
   namespace: flux-system
@@ -21,7 +21,7 @@ spec:
       chart: ./
       version: "1.2.0"
       sourceRef:
-        kind: HelmRepository
+        kind: GitRepository
         name: superset
         namespace: flux-system
       interval: 1m
